@@ -1,7 +1,7 @@
 import java.util.Vector;
 
 public class EnemyPlane extends Thread {
-	private int blood;
+	private int bloods;
 	private int x, y;
 	private int speed;
 	Vector<EnemyPlane> enemyPlanes = new Vector<>();
@@ -18,7 +18,7 @@ public class EnemyPlane extends Thread {
 
 	public void run() {
 		while (true) {
-			while (blood >= 0 ) {
+			while (bloods >= 0 ) {
 				enemyPlanes.add(new EnemyPlane(0, 0, 10));
 				if (this.getY() < 0) {//
 					break;
